@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 如果要嵌入请务必使用id为ex的标签 -->
+<html>
+    <head lang="zh-cn">
+        <meta charset="utf-8">
+        <title>Expector的个人主页</title>
+        <link rel="shortcut icon" href=../imgs/icon.ico>
+        <style>
+            body::-webkit-scrollbar {/*滚动条整体样式*/
+                width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+                height: 4px;
+            }
+            body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+                border-radius: 5px;
+                box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                background: rgba(0,0,0,0.2);
+            }
+            body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+                box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                border-radius: 0;
+                background: rgba(0,0,0,0.1);
+            }
+            body {
+                background-image: url(../imgs/bg2.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            #hd {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                float: top;
+                width: 100vw;
+                height: 14vh;
+                background-color: #00000066;
+                backdrop-filter: blur(3px);
+                text-align: center;
+            }
+            #bd {
+                margin-top: 20vh;
+                text-align: center;
+            }
+            #lg {
+                width: 33ch;
+                background-color: #00000066;
+                backdrop-filter: blur(3px);
+                text-align: center;
+                margin: 0 auto;
+                font-family: 'Lucida Handwriting';
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div id="hd">
+            <a style="font-size: 6vh;color: #FFFFFF;font-family: 'Lucida Handwriting';"><img src="../imgs/E.jpg" style="height: 10vh;width: 10vh;border-radius: 10vh;" /> Expector <img src="../imgs/HQ.png"  style="height: 10vh;width: 10vh;" /></a>
+        </div>
+        <div id="bd">
+            <h2 style="font-size: 5vh;color: #FFFFFF;font-family: STXingkai;">一个爱玩的学生</h2>
+            <img src="../imgs/E.gif" style="width: 32vh;height: 18vh;">
+            <h1 style="font-size: 6vh;color: #FFFFFF;font-family: STKaiti;">研究点有趣的</h1>
+        </div>
+        <div id="lg">
+            <a href="mailto: expector-hutch@outlook.com" target="_blank" style="color: #FFFFFF;text-decoration:none;word-break: break-all;">E-mail: exctptor-hutch@outlook.com<br/></a>
+            <a href="https://space.bilibili.com/1530809275" target="_blank" style="color: #FFFFFF;text-decoration:none;word-break: break-all;">bilibili: Expector-Hutch<br/></a>
+            <a href="https://github.com/Expector-Hutch" target="_blank" style="color: #FFFFFF;text-decoration:none;word-break: break-all;">GitHub: Exctptor-Hutch<br/></a>
+            <a href="https://gitee.com/expector" target="_blank" style="color: #FFFFFF;text-decoration:none;word-break: break-all;">Gitee: Expector</a>
+        </div>
+    </body>
+    <script>
+        if (window.self === window.top){
+            document.getElementById("lg").style.fontSize = ((window.screen.availWidth>window.screen.availHeight)?"3vh":"3vw");
+        } else{
+            document.getElementById("lg").style.fontSize = "1px";
+        }
+        document.getElementById("lg").style.maxWidth = document.getElementById("body").clientWidth+"px"
+    </script>
+</html>
